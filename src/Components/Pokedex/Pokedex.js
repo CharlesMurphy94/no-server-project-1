@@ -14,8 +14,8 @@ class Pokedex extends Component {
         isExpanded: false,
         scrolled:0,
         urlNumber:0,
-        url: 'http://pokeapi.co/api/v2/pokemon/?offset=',
-        fullUrl:'http://pokeapi.co/api/v2/pokemon/?limit=810',
+        url: 'https://pokeapi.co/api/v2/pokemon/?offset=',
+        fullUrl:'https://pokeapi.co/api/v2/pokemon/?limit=810',
         pokemonSearched:'',
       }
   }
