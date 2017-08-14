@@ -1,0 +1,142 @@
+.link_navbar{
+display: flex;
+align-items: center;
+justify-content: space-around;
+background: #121212;
+opacity: .7;
+overflow: hidden;
+position: relative;
+top: 0;
+z-index: 2;
+}
+.gol_link{
+  background: url('./Images/GameOfLife.png')no-repeat #121212;
+  background-size: 100px 100px;
+  height: 100px;
+  width: 100px;
+  opacity: 1;
+  position: relative;
+}
+.gol_link:hover{
+  opacity: .3;
+  overflow: hidden;
+  position: relative;
+  right: 20vw;
+  padding-right: 20vw;
+  margin-right: -20vw;
+  
+}
+.home_link{
+  background: url('./Images/home.png')no-repeat #121212;
+  background-size: 70px 70px;
+  height: 70px;
+  width: 100px;
+  opacity: .7;
+  position: relative;
+}
+.home_link:hover{
+  opacity: 1;
+}
+.poke_link{
+  background: url('./Images/pokeball.png')no-repeat #121212;
+  background-size: 70px 70px;
+  position: relative;
+  height: 70px;
+  width: 100px;
+  opacity: 1;
+  position: relative;
+  overflow: hidden;
+}
+.poke_link:hover{
+  opacity: .3;
+  overflow: hidden;
+  position: relative;
+  right: 20vw;
+  padding-right: 20vw;
+  margin-right: -20vw;
+}
+.link_before{
+  animation-name: 'go-left';
+  animation-duration: .5s;
+}
+.link_after{
+  animation-name: 'go-right';
+  animation-duration: .5s;
+}
+.gol_text{
+  position: absolute;
+  top: 18px;
+  left: 33vw;
+  color: white;
+  display: none;
+}
+.poke_text {
+  position: absolute;
+  top: 18px;
+  left: 66vw;
+  color: white;
+  display: none;
+}
+.text_display{
+ display: block;
+ animation: type 1s steps(60, end);
+ white-space: nowrap;
+ overflow: hidden;
+ width: 300px;
+ font-family: 'VT323', monospace;
+ font-size: 40px;
+ margin-top: 10px;
+}
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  20%{
+    width: 0;
+  }
+}
+@keyframes go-left{
+  0%{
+    right: 0;
+    opacity: .7
+  }
+}
+@keyframes go-right{
+  0%{
+    right: 20vw;
+    padding-right: 20vw;
+    margin-right: -20vw;
+  }
+  100%{
+    right:0;
+    padding-right: 0;
+    margin-right: 0;
+  }
+}
+@media (max-width: 565px) {
+  @keyframes go-left {
+    0% {
+      opacity: 0;
+    }
+  }
+  .poke_link {
+    left: 0;
+    padding: 0;
+    margin: 0;
+  }
+  .gol_link {
+    left:0px;
+    padding: 0;
+    margin: 0;
+  }
+  .gol_text {
+    font-size: 30px;
+  }
+  .poke_text {
+    font-size: 35px;
+  }
+  .home_link{
+    padding: 0;
+    margin: 0;
+  }
+}
